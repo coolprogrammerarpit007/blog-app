@@ -29,4 +29,9 @@ Route::redirect('/home','/');
 // calling the controller
 Route::get('/user',[UserController::class,'getUserName']);
 Route::get('/new-user/{name}',[UserController::class,'newUserName']);
+Route::get('/new-page',function(){
+    return view('new-page');
+});
 
+
+Route::get('admin-login-user',[UserController::class,'adminLogin']);
